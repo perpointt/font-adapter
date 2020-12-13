@@ -1,22 +1,15 @@
 class FontAdapter {
   constructor(options) {
     this.container = document.querySelector(options.container || "#adapter");
-    this.textarea = this.container.querySelector(
-      options.textarea || ".js-adapter-textarea"
-    );
+    this.textarea = this.container.querySelector("[data-range='textarea']");
     this.textarea.value =
-      options.textareaText ||
+      options.text ||
       "example text, use propery textareaText to change it";
     this.sizeRange = this.container.querySelector("[data-range='size']");
     this.spacingRange = this.container.querySelector("[data-range='spacing']");
     this.heightRange = this.container.querySelector("[data-range='height']");
     this.fontSelect = this.container.querySelector("[data-range='font']");
     this.sansSerif = options.sansSerif || false;
-    // this.fonts
-    // this.color = options.color || "#fff";
-    // this.hover = options.hover || "#ffad00";
-    // this.transition = options.transition || 1;
-    // this.lettersAnimation = options.lettersAnimation || false;
 
     this.init();
   }
@@ -62,5 +55,10 @@ class FontAdapter {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const adapter = new FontAdapter({});
+  const adapter = new FontAdapter({
+      container: '#adapter',
+      text: 'example text, use propery textareaText to change it',
+      sansSerif: false,
+      
+  });
 });
