@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Font-adapter-DEMO</title>
+  </head>
+  <body>
+    <div id="adapter">
+      <div class="options">
+        <label>
+          <span>Font-size</span>
+          <input type="range" value="0" min="0" max="100" data-range="size" />
+        </label>
+        <label>
+          <span>Letter-spacing</span>
+          <input
+            type="range"
+            value="0"
+            min="0"
+            max="100"
+            data-range="spacing"
+          />
+        </label>
+        <label>
+          <span>Line-height</span>
+          <input type="range" value="0" min="0" max="100" data-range="height" />
+        </label>
+        <select data-range="font">
+          <option value="Roboto">Roboto</option>
+          <option value="Noto-Sans">Noto-Sans</option>
+        </select>
+      </div>
+      <textarea class="js-adapter-textarea"></textarea>
+    </div>
+
+    <script src="font-adapter.js"></script>
+  </body>
+</html>
