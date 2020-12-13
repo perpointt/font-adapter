@@ -3,8 +3,7 @@ class FontAdapter {
     this.container = document.querySelector(options.container || "#adapter");
     this.textarea = this.container.querySelector("[data-range='textarea']");
     this.textarea.value =
-      options.text ||
-      "example text, use propery textareaText to change it";
+      options.text || "example text, use propery textareaText to change it";
     this.sizeRange = this.container.querySelector("[data-range='size']");
     this.spacingRange = this.container.querySelector("[data-range='spacing']");
     this.heightRange = this.container.querySelector("[data-range='height']");
@@ -53,12 +52,3 @@ class FontAdapter {
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const adapter = new FontAdapter({
-      container: '#adapter',
-      text: 'example text, use propery textareaText to change it',
-      sansSerif: false,
-      
-  });
-});
